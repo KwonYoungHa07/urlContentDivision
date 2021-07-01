@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<meta http-equiv="Content-Type"    content="text/html; charset=UTF-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <script type="text/javascript" src="/js/common/common.js"></script>
+	    <script type="text/javascript" src="/js/urlContentDivision/urlContentDivision.js"></script>
+	</head>
+	<body>
+		<div class="container">
+		    <div class="input" style="width:350px;">
+		        <b>[입력]</b>
+		        <br><br>
+		        <!--
+		        <form id="urlContentsDivisionfrm" action="/html-division/calculate" method="get"> 
+		         -->
+		        <form id="urlContentsDivisionfrm">		        
+		            <div class="form-group">
+		                <label for="url">URL</label>
+		                <input type="text" id="url" name="url" style="float:right;">
+		                <br><br>
+		                <label for="type">TYPE</label>
+		                <select id="type" name="type" style="width:177px; float:right;">
+		                    <option value="tagExclusion">HTML 태그 제외</option>
+		                    <option value="totalText">Text 전체</option>
+		                </select>
+		                <br><br>
+		                <label for="divisor">출력 단위 묶음</label>
+		                <input type="text" id="divisor" name="divisor" style="float:right;">
+		                <br><br>
+		                <!-- 
+		                <button type="submit" style="float:right;">출력</button>
+		                 -->
+		                <a href="#none" id="btnOutput" style="float:right;">출력</a>
+		                <br>
+		            </div>
+		        </form>
+		    </div>
+		    <div class="output">
+		        <b>[출력]</b>
+		        <br><br>
+		        <div>
+		            몫:    <p id="quotient"></p>
+		            나머지: <p id="remainder"></p>
+		        </div>
+		    </div>
+		</div>
+	</body>
+</html>
